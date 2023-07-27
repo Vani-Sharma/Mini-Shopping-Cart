@@ -551,24 +551,24 @@
         "https://i.dummyjson.com/data/products/30/3.jpg",
         "https://i.dummyjson.com/data/products/30/thumbnail.jpg"
       ]
+    },
+    {
+      "quantity": 1,
+      "id": 31
+    },
+    {
+      "quantity": 1,
+      "id": 32
     }
   ],
   "cart": [
-    {
-      "id": 1,
-      "title": "iPhone 9",
-      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-      "price": 549,
-      "brand": "Apple",
-      "quantity": 1
-    },
     {
       "id": 2,
       "title": "iPhone X",
       "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
       "price": 899,
       "brand": "Apple",
-      "quantity": 3
+      "quantity": 1
     },
     {
       "id": 3,

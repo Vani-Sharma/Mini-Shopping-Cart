@@ -11,14 +11,6 @@ export const fetchAsync = createAsyncThunk("product/fetchProduct", async () => {
   return response.data;
 });
 
-export const addProductAsync = createAsyncThunk(
-  "product/addProduct",
-  async (id, product) => {
-    const response = await addProduct(id, product);
-    return response.data;
-  }
-);
-
 export const productSlice = createSlice({
   name: "product",
   initialState,

@@ -11,6 +11,7 @@ export function Product() {
   useEffect(() => {
     dispatch(fetchAsync());
   }, []);
+
   return (
     <div>
       <div>
@@ -24,17 +25,6 @@ export function Product() {
             <h1>{product.title}</h1>
             <p className="price">{product.price}</p>
             <p>{product.description}</p>
-            <div className="quantity">
-              Quantity
-              <select
-                value={product.quantity}
-                onChange={(e) => handleChange(e, product.id)}
-              >
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-              </select>
-            </div>
             <p>
               <button onClick={() => dispatch(addAsync(product))}>
                 Add to Cart
