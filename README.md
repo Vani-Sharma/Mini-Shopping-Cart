@@ -1,5 +1,5 @@
-# Mini-Shopping-Cart uses dummy json to access Products data
-
+# Mini-Shopping-Cart
+-> It uses dummy json to access Products data
 -> It aims to understand the implementation flow of asyncThunk in Redux Toolkit by performing CRUD operation on the data
 -> The products are automatically fetched from json file and rendered on browser using useEffect hook of React
 -> Quantity of products to be added in cart can be changed
