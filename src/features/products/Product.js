@@ -14,16 +14,12 @@ export function Product() {
 
   return (
     <div>
-      <div>
-        {products.map((product) => (
-          <div className="card">
-            <img
-              src={product.thumbnail}
-              alt={product.title}
-              style={{ width: "100%" }}
-            />
+      {products.map((product) => (
+        <div className="card">
+          <img src={product.thumbnail} alt={product.title} />
+          <div className="cardContent">
             <h1>{product.title}</h1>
-            <p className="price">{product.price}</p>
+            <p className="price">${product.price}</p>
             <p>{product.description}</p>
             <p>
               <button onClick={() => dispatch(addAsync(product))}>
@@ -31,8 +27,8 @@ export function Product() {
               </button>
             </p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }

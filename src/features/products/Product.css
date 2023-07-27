@@ -1,11 +1,18 @@
 .card {
+  display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
+  max-width: 100%;
+  margin: 5rem 10rem;
   text-align: center;
   font-family: arial;
+  height: 35vh;
 }
 
+.cardContent {
+  margin-top: 1rem;
+  margin-left: 5rem;
+  width: 50%;
+}
 .price {
   color: grey;
   font-size: 22px;
@@ -19,7 +26,7 @@
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   font-size: 18px;
 }
 

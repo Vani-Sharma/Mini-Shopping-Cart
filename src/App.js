@@ -17,8 +17,14 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={() => setShowCart(!showCart)}>
-        Cart [{item.length}]
+      <button className="outer-btn" onClick={() => setShowCart(!showCart)}>
+        {showCart ? (
+          <button className="custom-btn btn-5">View Products</button>
+        ) : (
+          <button className="custom-btn btn-5">
+            View Cart [{item.length}]
+          </button>
+        )}
       </button>
       {showCart ? <Cart /> : <Product />}
     </div>

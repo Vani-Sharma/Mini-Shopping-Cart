@@ -38,9 +38,10 @@ export function Cart() {
           </div>
         ))}
       </div>
-      <h1>
-        Total:{items.reduce((acc, item) => item.price * item.quantity + acc, 0)}
-      </h1>
+      <h2>
+        Total Amount :
+        {items.reduce((acc, item) => item.price * item.quantity + acc, 0)}
+      </h2>
     </div>
   );
 }
