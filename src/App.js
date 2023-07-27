@@ -1,56 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Product } from "./features/products/Product";
+import { Cart } from "./features/carts/Cart";
+import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchAsync } from "./features/carts/cartSlice";
 
 function App() {
+  const [showCart, setShowCart] = useState(false);
+  const item = useSelector((state) => state.cart.item);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAsync());
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <button onClick={() => setShowCart(!showCart)}>
+        Cart [{item.length}]
+      </button>
+      {showCart ? <Cart /> : <Product />}
     </div>
   );
 }
